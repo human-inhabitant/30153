@@ -7,14 +7,16 @@
     "angular": "^1.2.18",
     "body-parser": "^1.19.0",
     "bootstrap": "^3.1.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "mean"
+    "mean",
+    "dickey"
   ],
   "author": "Jeff Dickey",
   "license": "ISC"
