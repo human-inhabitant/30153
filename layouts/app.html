@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.1.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/app.css" />
+    <title>Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js</title>
+  </head>
+  <body ng-app='app' ng-controller='ApplicationCtrl'>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="/#/">Posts</a></li>
+          <li><a href="/#/register">Register</a></li>
+          <li><a href="/#/login">Login</a></li>
+        </ul>
+        <p ng-if='currentUser' class="navbar-text navbar-right">
+          Signed in as {{currentUser.username}}
+        </p>
+      </div>
+    </nav>
+
+    <div ng-view></div>
+
+    <script src="https://code.angularjs.org/1.2.18/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.18/angular-route.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

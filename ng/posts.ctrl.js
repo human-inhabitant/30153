@@ -1,7 +1,7 @@
 angular
   .module( 'app' )
-  .controller( 'PostsCtrl', function( $scope, PostSvc ) {
-    PostSvc
+  .controller( 'PostsCtrl', function( $scope, PostsSvc ) {
+    PostsSvc
       .fetch()
       .success( function( posts ) {
         $scope.posts = posts;
@@ -9,7 +9,7 @@ angular
     ;
     $scope.addPost = function() {
       if ( $scope.postBody ) {
-        PostSvc
+        PostsSvc
           .create({
             username: 'dickeyxxx',
             body: $scope.postBody

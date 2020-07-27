@@ -1,6 +1,6 @@
 angular
   .module( 'app' )
-  .service( 'PostSvc', function( $http ) {
+  .service( 'PostsSvc', function( $http ) {
     this.fetch = function() {
       return $http.get( '/api/posts' );
     };
