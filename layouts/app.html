@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.1.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/app.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js</title>
   </head>
   <body ng-app='app' ng-controller='ApplicationCtrl'>
@@ -11,11 +12,13 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <ul class="nav navbar-nav">
-          <li><a href="/#/">Posts</a></li>
-          <li><a href="/#/register">Register</a></li>
-          <li><a href="/#/login">Login</a></li>
+          <li><a href="/#/" class="posts">Posts</a></li>
         </ul>
-        <p ng-if='currentUser' class="navbar-text navbar-right">
+        <ul class="nav navbar-nav navbar-right" ng-if="!currentUser">
+          <li><a href="/#/register" class="register">Register</a></li>
+          <li><a href="/#/login" class="login">Login</a></li>
+        </ul>
+        <p class="navbar-text navbar-right" ng-if="currentUser">
           Signed in as {{currentUser.username}}
         </p>
       </div>

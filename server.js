@@ -12,8 +12,9 @@ app.use( require( './controllers/static' ) );
 app.use('/api/sessions', require( './controllers/api/sessions' ) );
 app.use('/api/users', require( './controllers/api/users' ) );
 
-const server = app.listen( 3000, function() {
-  console.info( 'Server listening on', 3000 );
+const port = process.env.PORT || 3000;
+const server = app.listen( port, function() {
+  console.info( 'Server', process.pid, 'listening on', port );
 });
 
 require( './websockets' ).connect( server );

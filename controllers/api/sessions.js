@@ -1,6 +1,6 @@
 'use strict';
 
-const router = require( 'index' );
+const router = require( 'express' ).Router();
 const User = require( '../../models/user' );
 const bcrypt = require( 'bcrypt' );
 const jwt = require( 'jwt-simple' );

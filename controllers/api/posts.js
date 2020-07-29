@@ -1,6 +1,6 @@
 'use strict';
 
-const router = require( 'index' );
+const router = require( 'express' ).Router();
 const websockets = require( '../../websockets' );
 const Post = require( '../../models/post' );
 
