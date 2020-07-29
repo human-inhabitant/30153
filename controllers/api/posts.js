@@ -2,6 +2,7 @@
 
 const Post = require( '../../models/post' );
 const router = require( 'express' ).Router();
+const websockets = require( '../../websockets' );
 
 router
   .get( '/', function( req, res, next ) {
@@ -29,6 +30,7 @@ router
         if ( err ) {
           return next( err );
         }
+        websockets.broadcast( 'new_post', post );
         res.status( 201 ).json( post );
       })
     ;
