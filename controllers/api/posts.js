@@ -1,14 +1,14 @@
 'use strict';
 
-const Post = require( '../../models/post' );
-const router = require( 'express' ).Router();
+const router = require( 'index' );
 const websockets = require( '../../websockets' );
+const Post = require( '../../models/post' );
 
 router
   .get( '/', function( req, res, next ) {
     Post
       .find()
-      .sort()
+      .sort( '-date' )
       .exec( function( err, posts ) {
         if ( err ) {
           return next( err );
@@ -21,10 +21,8 @@ router
 
 router
   .post( '/', function( req, res, next ) {
-    const post = new Post({
-      username: req.body.username,
-      body: req.body.body
-    });
+    const post = new Post({ body: req.body.body });
+    post.username = req.body.username;
     post
       .save( function( err, post ) {
         if ( err ) {
