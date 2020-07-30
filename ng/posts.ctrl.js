@@ -3,7 +3,7 @@ angular
   .controller( 'PostsCtrl', function( $scope, PostsSvc ) {
     PostsSvc
       .fetch()
-      .success( function( posts ) {
+      .then( function( posts ) {
         $scope.posts = posts;
       })
     ;
@@ -14,7 +14,7 @@ angular
             username: 'dickeyxxx',
             body: $scope.postBody
           })
-          .success( function( post ) {
+          .then( function( post ) {
             //$scope.posts.unshift( post );
             $scope.postBody = null;
           })

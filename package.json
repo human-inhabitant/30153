@@ -1,11 +1,12 @@
 {
-  "name": "62369",
+  "name": "30153",
   "version": "1.0.0",
   "description": "Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js",
   "main": "app.js",
   "dependencies": {
-    "angular": "^1.2.18",
-    "angular-route": "^1.2.18",
+    "angular": "^1.2.21",
+    "angular-mocks": "^1.2.21",
+    "angular-route": "^1.2.21",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^3.1.1",
@@ -25,6 +26,11 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "karma": "^5.1.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sinon-chai": "^2.0.2",
     "mocha": "^8.0.1",
     "protractor": "^7.0.0"
   },
