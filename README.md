@@ -7,7 +7,7 @@ fun.
 
 ## Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js
 
-![Learning jQuery](https://images-na.ssl-images-amazon.com/images/I/51TA7DK6XJL._SX402_BO1,204,203,200_.jpg)  
+![Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js](https://images-na.ssl-images-amazon.com/images/I/51TA7DK6XJL._SX402_BO1,204,203,200_.jpg)  
 
 By: Jeff Dickey  
 
